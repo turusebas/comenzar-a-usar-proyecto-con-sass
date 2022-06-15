@@ -1,0 +1,175 @@
+//comentario en sass
+//nesting o anidamiento
+@import "utilities/variables";
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f1f3f7;
+}
+header{
+    z-index: 9;
+    width: 100%;
+    height: 30%;
+    position: fixed;
+    top:0px;
+    bottom: 0px;
+    left:0;
+    background-color: #f1f3f7;     
+}
+.headerSuperior{
+    width: $medida-principal;     
+    margin: 0px auto 0px;    
+    display:flex;
+     align-items: center;
+     justify-content: space-evenly;
+     padding: 10px;
+     .logo{
+         img{
+            width: 30%;
+            height: auto;
+         }
+     }
+    .elegi{
+            width: 100%;
+            p{ 
+            margin-top: 5px;
+            display: inline-block;            
+            font-size: 1.2rem;    
+            }
+           h1{
+            margin-right: 300px;
+            }
+           
+          }
+          .search{
+            input{
+             width: 200px;
+             padding: 10px;
+            }
+        }
+      i{
+            font-size: 40px;
+            margin: 0px 30px;
+            align-self: center;
+        }
+}
+
+.navegacion{
+    
+    width: $medida-principal;
+    margin:0px auto ; 
+    position: relative;  
+    top: -5px;
+    background: #385C9C; 
+    height: 35%;   
+    ul{        
+        list-style: none;
+                
+         li{
+            position: relative; /*para que el li no se vaya a otra parte de la pagina */
+            display: inline-block;
+
+            a{
+                display: block;
+                padding: 15px 20px;
+                color: #fff;
+                text-decoration : none;
+                font-size: 1.2rem;
+                &:hover{
+                    color:black;
+                   transition: all .7s; //volver a ver esta etiqueta
+                }
+            }
+           }
+    }    
+    }
+  .menu{
+    
+    li{
+        &:hover .submenu{
+            visibility: visible;
+            opacity: 0.99;
+            
+            }
+           
+        }
+    }
+     
+.submenu{
+    
+        position:absolute; 
+        background: #5f5f5f;
+        width: 115%; /*para que no quede tan chico con respecto a su padre menu */
+        visibility: hidden; /* capitulo 19 de curso css VER video anterior de css de este pibe */
+       
+        transition: opacity 1.5s; /*ver esta etiqueta */
+        li{
+            position: relative;
+            }
+        li a{
+            display: block;
+            padding: 15px;
+            color: black;
+            font-size: 1.1rem;
+            text-decoration: none;
+           
+        }
+        li{
+            &:hover .subsubmenu{
+                display: block;
+                left: 100%;
+                top: 0px;
+                        }
+        }
+        .subsubmenu{
+            position: absolute;
+        display: none;
+        background: #5f5f5f;
+       }
+    } 
+    //falta poner el hover que creo que era con &  linea de codigo 106 en subline text. fijarse
+section{
+    width:100%;
+    height: 100%;
+    .caja1{ 
+        width: 1300px;       
+        height: 750px;            
+        background-image: url(../imagenes/silla-paisaje.jpg);
+     background-repeat: no-repeat;
+       background-position: center bottom;
+        margin: 0px auto;
+        background-size: 100%;   
+       }
+     
+}
+section{
+    h2{
+        text-align: center;       
+        margin: 80px auto 55px;
+        
+    }
+    p{
+        text-align: center;  
+        color: black;
+        margin-bottom: 50px;
+        font-size: 1.5rem;
+        
+    }
+} 
+main{
+    width: 100%;
+    height: 100%;
+    .ancho-principal{
+        width: 100%;        
+            .estilos-card{
+             
+            
+        }
+      
+    }
+}
+
+ 
